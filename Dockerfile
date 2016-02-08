@@ -1,7 +1,6 @@
-FROM gliderlabs/alpine:3.3
+FROM alpine:latest
 MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
-RUN (apk --update add virt-manager openssh-client && apk --update add openssh-askpass --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted)
-ADD entrypoint.sh /entrypoint.sh
+RUN (apk --update add dbus-x11 openssh-client virt-manager && apk --update add openssh-askpass --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted && rm -rf /var/cache/apk/*)
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD /usr/bin/virt-manager & read
