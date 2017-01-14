@@ -7,4 +7,4 @@ RUN apk --no-cache add dbus-x11 gtk+2.0 openssh-client virt-manager
 COPY gtk-ssh-askpass /usr/lib/ssh/gtk-ssh-askpass
 ENV SSH_ASKPASS /usr/lib/ssh/gtk-ssh-askpass
 
-CMD /usr/bin/virt-manager & read
+CMD ["/usr/bin/virt-manager","--no-fork"]
