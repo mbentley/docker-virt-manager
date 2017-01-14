@@ -33,3 +33,9 @@ docker run \
   -v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
   mbentley/virt-manager`
 ```
+
+If you would like to keep persistent connection information, add another volume:
+
+```
+-v /path/to/saved/config:/root/.config/dconf
+```
