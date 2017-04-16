@@ -21,7 +21,7 @@ Running on macOS:
 docker run \
   -e DISPLAY=<ip-of-your-box>:0 \
   -v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
-  mbentley/virt-manager`
+  mbentley/virt-manager
 ```
 
 Running in X11:
@@ -31,7 +31,7 @@ docker run \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -e DISPLAY=unix$DISPLAY \
   -v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
-  mbentley/virt-manager`
+  mbentley/virt-manager
 ```
 
 If you would like to keep persistent connection information, add another volume:
