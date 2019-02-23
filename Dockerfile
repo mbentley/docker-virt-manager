@@ -6,4 +6,8 @@ RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repos
 
 ENV SSH_ASKPASS /usr/lib/ssh/gtk-ssh-askpass
 
+COPY entrypoint.sh /entrypoint.sh
+COPY config /root/.ssh/config
+
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/bin/virt-manager","--no-fork"]
