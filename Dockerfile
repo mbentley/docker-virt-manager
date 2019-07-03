@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.9
 MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
 RUN echo '@edge http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories &&\
