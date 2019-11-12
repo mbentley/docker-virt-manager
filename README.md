@@ -26,6 +26,11 @@ docker run --rm \
 
 Running in X11:
 
+Allow connections to the X session:
+```
+xhost +SI:localuser:$(whoami)
+```
+
 ```
 docker run --rm \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
