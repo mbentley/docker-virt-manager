@@ -1,6 +1,6 @@
 # rebased/repackaged base image that only updates existing packages
 FROM mbentley/alpine:latest
-MAINTAINER Matt Bentley <mbentley@mbentley.net>
+LABEL maintainer="Matt Bentley <mbentley@mbentley.net>"
 
 RUN echo '@edge https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories &&\
   apk --no-cache add adwaita-icon-theme dbus-x11 dconf gtk+2.0 mesa-gl openssh-client ttf-dejavu virt-manager openssh-askpass@edge
