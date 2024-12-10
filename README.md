@@ -1,5 +1,4 @@
-mbentley/virt-manager
-=====================
+# mbentley/virt-manager
 
 docker image for virt-manager
 based off of alpine:latest
